@@ -54,6 +54,8 @@ export const CheckCircle: React.FC<any> = (props) => <span {...props}>✅</span>
 export const XCircle: React.FC<any> = (props) => <span {...props}>❌</span>;
 export const LogOut: React.FC<any> = (props) => <span {...props}>🚪</span>;
 export const ArrowLeft: React.FC<any> = (props) => <span {...props}>←</span>;
+export const User: React.FC<any> = (props) => <span {...props}>👤</span>;
+export const X: React.FC<any> = (props) => <span {...props}>✕</span>;
 export const ChevronDown: React.FC<any> = (props) => <span {...props}>⌄</span>;
 export const RotateCw: React.FC<any> = (props) => <span {...props}>⟳</span>;
 export const Target: React.FC<any> = (props) => <span {...props}>🎯</span>;
