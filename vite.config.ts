@@ -6,15 +6,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, './src'),
+      'lucide-react': path.resolve(__dirname, './src/utils/DemoIcons.tsx'),
     },
-  },
-  server: {
-    port: 3000,
-    host: true,
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
   },
 })
