@@ -3,6 +3,7 @@ import React from 'react';
 type IconProps = any;
 
 // Comprehensive demo icon components - emoji-based placeholders
+export const Activity: React.FC<IconProps> = (props) => <span {...props}>📈</span>;
 export const AlertCircle: React.FC<IconProps> = (props) => <span {...props}>⚠️</span>;
 export const AlertTriangle: React.FC<IconProps> = (props) => <span {...props}>⚠️</span>;
 export const ArrowDown: React.FC<IconProps> = (props) => <span {...props}>↓</span>;
@@ -11,6 +12,7 @@ export const ArrowRight: React.FC<IconProps> = (props) => <span {...props}>→</
 export const ArrowUp: React.FC<IconProps> = (props) => <span {...props}>↑</span>;
 export const BarChart3: React.FC<IconProps> = (props) => <span {...props}>📊</span>;
 export const Bell: React.FC<IconProps> = (props) => <span {...props}>🔔</span>;
+export const Brain: React.FC<IconProps> = (props) => <span {...props}>🧠</span>;
 export const Calendar: React.FC<IconProps> = (props) => <span {...props}>📅</span>;
 export const Check: React.FC<IconProps> = (props) => <span {...props}>✓</span>;
 export const CheckCircle: React.FC<IconProps> = (props) => <span {...props}>✅</span>;
@@ -28,6 +30,7 @@ export const Edit3: React.FC<IconProps> = (props) => <span {...props}>✎</span>
 export const Eye: React.FC<IconProps> = (props) => <span {...props}>👁️</span>;
 export const EyeOff: React.FC<IconProps> = (props) => <span {...props}>🙈</span>;
 export const Facebook: React.FC<IconProps> = (props) => <span {...props}>f</span>;
+export const FileText: React.FC<IconProps> = (props) => <span {...props}>📄</span>;
 export const Filter: React.FC<IconProps> = (props) => <span {...props}>🔽</span>;
 export const Flashlight: React.FC<IconProps> = (props) => <span {...props}>🔦</span>;
 export const Gamepad2: React.FC<IconProps> = (props) => <span {...props}>🎮</span>;
@@ -44,6 +47,7 @@ export const Loader2: React.FC<IconProps> = (props) => <span {...props} classNam
 export const Lock: React.FC<IconProps> = (props) => <span {...props}>🔒</span>;
 export const LogOut: React.FC<IconProps> = (props) => <span {...props}>🚪</span>;
 export const Mail: React.FC<IconProps> = (props) => <span {...props}>✉️</span>;
+export const MapPin: React.FC<IconProps> = (props) => <span {...props}>📍</span>;
 export const Menu: React.FC<IconProps> = (props) => <span {...props}>☰</span>;
 export const MessageCircle: React.FC<IconProps> = (props) => <span {...props}>💬</span>;
 export const MessageSquare: React.FC<IconProps> = (props) => <span {...props}>💬</span>;
@@ -55,8 +59,11 @@ export const Phone: React.FC<IconProps> = (props) => <span {...props}>📞</span
 export const Play: React.FC<IconProps> = (props) => <span {...props}>▶️</span>;
 export const Plus: React.FC<IconProps> = (props) => <span {...props}>+</span>;
 export const RedCard: React.FC<IconProps> = (props) => <span {...props}>🟥</span>;
-export const RotateCw: React.FC<IconProps> = (props) => <span {...props}>⟳</span>;
+export const RotateCcw: React.FC<IconProps> = (props) => <span {...props}>↺</span>;
+export const RotateCw: React.FC<IconProps> = (props) => <span {...props}>↻</span>;
+export const Save: React.FC<IconProps> = (props) => <span {...props}>💾</span>;
 export const Schedule: React.FC<IconProps> = (props) => <span {...props}>📅</span>;
+export const Search: React.FC<IconProps> = (props) => <span {...props}>🔍</span>;
 export const Send: React.FC<IconProps> = (props) => <span {...props}>📤</span>;
 export const Shield: React.FC<IconProps> = (props) => <span {...props}>🛡️</span>;
 export const Sparkles: React.FC<IconProps> = (props) => <span {...props}>✨</span>;
@@ -80,11 +87,27 @@ export const XCircle: React.FC<IconProps> = (props) => <span {...props}>❌</spa
 export const YellowCard: React.FC<IconProps> = (props) => <span {...props}>🟨</span>;
 export const Zap: React.FC<IconProps> = (props) => <span {...props}>⚡</span>;
 
-// Animation components
+// Animation components - export BOTH spellings to be safe
 export const AnimatePresence: React.FC<any> = ({ children }) => <>{children}</>;
+export const AnimatePresense: React.FC<any> = ({ children }) => <>{children}</>;
+
+// motion object - NO duplicate keys (each key appears ONLY ONCE)
 export const motion = {
-  div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-  button: ({ children, ...props }: any) => <button {...props}>{children}</button>,
-  section: ({ children, ...props }: any) => <section {...props}>{children}</section>,
-  div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+  div: (props: any) => <div {...props}>{props.children}</div>,
+  button: (props: any) => <button {...props}>{props.children}</button>,
+  section: (props: any) => <section {...props}>{props.children}</section>,
+  span: (props: any) => <span {...props}>{props.children}</span>,
+  p: (props: any) => <p {...props}>{props.children}</p>,
+  ul: (props: any) => <ul {...props}>{props.children}</ul>,
+  li: (props: any) => <li {...props}>{props.children}</li>,
+  aside: (props: any) => <aside {...props}>{props.children}</aside>,
+  form: (props: any) => <form {...props}>{props.children}</form>,
+  a: (props: any) => <a {...props}>{props.children}</a>,
+  tr: (props: any) => <tr {...props}>{props.children}</tr>,
+  td: (props: any) => <td {...props}>{props.children}</td>,
+  th: (props: any) => <th {...props}>{props.children}</th>,
+  img: (props: any) => <img {...props} />,
+  h1: (props: any) => <h1 {...props}>{props.children}</h1>,
+  h2: (props: any) => <h2 {...props}>{props.children}</h2>,
+  h3: (props: any) => <h3 {...props}>{props.children}</h3>,
 };
