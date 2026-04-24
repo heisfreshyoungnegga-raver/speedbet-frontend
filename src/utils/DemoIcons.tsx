@@ -12,6 +12,7 @@ export const ArrowRight: React.FC<IconProps> = (props) => <span {...props}>→</
 export const ArrowUp: React.FC<IconProps> = (props) => <span {...props}>↑</span>;
 export const BarChart3: React.FC<IconProps> = (props) => <span {...props}>📊</span>;
 export const Bell: React.FC<IconProps> = (props) => <span {...props}>🔔</span>;
+export const Bot: React.FC<IconProps> = (props) => <span {...props}>🤖</span>;
 export const Brain: React.FC<IconProps> = (props) => <span {...props}>🧠</span>;
 export const Calendar: React.FC<IconProps> = (props) => <span {...props}>📅</span>;
 export const Check: React.FC<IconProps> = (props) => <span {...props}>✓</span>;
@@ -65,6 +66,7 @@ export const Save: React.FC<IconProps> = (props) => <span {...props}>💾</span>
 export const Schedule: React.FC<IconProps> = (props) => <span {...props}>📅</span>;
 export const Search: React.FC<IconProps> = (props) => <span {...props}>🔍</span>;
 export const Send: React.FC<IconProps> = (props) => <span {...props}>📤</span>;
+export const Settings: React.FC<IconProps> = (props) => <span {...props}>⚙️</span>;
 export const Shield: React.FC<IconProps> = (props) => <span {...props}>🛡️</span>;
 export const Sparkles: React.FC<IconProps> = (props) => <span {...props}>✨</span>;
 export const Star: React.FC<IconProps> = (props) => <span {...props}>⭐</span>;
